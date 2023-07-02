@@ -1,0 +1,484 @@
+@import 'normalize';
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    // font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+input[type=text], textarea, input[type=tel], input[type=email], input[type=number] {
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+// body {
+//     font-family: -apple-system,BlinkMacSystemFont,sans-serif;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	width: 100%;
+}
+
+header {
+    // padding: 1em 0;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+// colours
+$black: #000000;
+$white: #ffffff;
+$orange: #ff8000;
+$orange_light: #f9a88a;
+$beige: #feefdd;
+$blue_sky: #47c7fc;
+$greenLight: #72cc3f;
+$greenDark: #5b9933;
+$orange: #ff8000;
+$greyLight: #5d4c4c;
+$greyDark: #574747;
+
+// fonts
+$menu-size: 1.2em;
+$copy-size: 0.8em;
+
+@font-face {
+    font-family: 'big-shot';
+    src: url('../fonts/big-shot.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-display: swap;
+}
+
+button,
+.wp-block-button__link.wp-element-button
+{
+
+    background-color: $orange;
+    padding: 10px 40px;
+    border-radius: 10%;
+}
+
+ul {
+
+    width: 100%;
+    list-style-position: inside;
+}
+
+li {
+
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    width: 100% !important;
+}
+
+body {
+
+    padding: 0px 0%;
+    // background: url('../img/flag.gif'), linear-gradient($blue_sky 100%);
+    // background-color: $black;
+    // color: $black;
+    // display: flex;
+    // flex-direction: column;
+    // height: 100vh;
+    // background: url('../img/flag.gif'), linear-gradient(90deg, $orange 0%, $orange_light 50%, $blue_sky 100%);
+    background:  linear-gradient(90deg, $orange 0%, $orange_light 50%, $blue_sky 100%);
+    font-family: 'big-shot';
+    
+}
+
+@media (max-width: 600px)  {
+
+    body {
+
+        // padding: 20px;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1200px)  {
+
+}
+
+@media (min-width: 1200px)  {
+
+}
+
+a {
+
+    color: $black;
+    text-decoration: none;
+}
+
+/* menu */
+.menu {
+
+    ul {
+
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+
+        li {
+
+            margin-right: 10px;
+        }
+    }
+}
+
+/* header */
+header {
+    
+    font-size: $menu-size;
+    // background: url('../img/flag.gif'), linear-gradient(90deg, $orange 0%, $orange_light 50%, $blue_sky 100%);
+    // background: url('../img/flag.gif'), linear-gradient($blue_sky 100%);
+    // padding: 0px 20px 50px 20px;
+    position: fixed;
+    width: 100%;
+ 
+    .wrapper {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .services-wrapper {
+
+            flex: 1;
+        }
+    }
+}
+
+@media (max-width: 600px)  {
+
+    header {
+
+        .menu-burger {
+
+            display: block;
+        }
+
+        .menu {
+
+            display: none;
+        }
+   }
+   
+}
+
+@media (min-width: 600px) and (max-width: 1200px)  {
+
+    header {
+
+        .menu-burger {
+
+            display: block;
+        }
+
+        .menu {
+
+            display: none;
+        }
+   }
+   
+
+}
+
+@media (min-width: 1200px)  {
+
+   header {
+
+        .menu-burger {
+
+            display: none;
+        }
+   }
+}
+
+
+.main {
+
+   flex: 1;
+}
+
+/* footer */
+footer {
+
+    font-size: $menu-size;
+
+    .wrapper {
+
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 600px)  {
+
+    footer {
+    
+        .wrapper {
+    
+            justify-content: center;
+        }
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1200px)  {
+
+    footer {
+    
+        .wrapper {
+    
+            justify-content: center;
+        }
+    }
+
+}
+
+/* content grid - defines each row of homepage ------------------------- */
+.grid {
+
+    display: grid;
+    grid-template-columns: 0.5fr 10px 2fr 10px 0.5fr;
+    grid-auto-rows: minmax(100vh, auto);
+
+    
+    div:nth-child(3) {
+
+        padding: 20px;
+        color: $white;
+        // background: url('../img/line.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: $copy-size;
+        text-align: center;
+    }
+    
+    /* odd */
+    &:nth-child(odd) {
+
+        div:first-child,
+        div:nth-child(5) {
+
+            background-color: transparent;
+        }
+
+        div:nth-child(3) {
+
+            background-color: transparent;
+        }
+
+        div:nth-child(2),
+        div:nth-child(4) {
+
+            background-color: transparent;
+        }
+
+    }
+
+    /* even */
+    &:nth-child(even) {
+
+        div:first-child,
+        div:nth-child(5) {
+
+            background-color: transparent;
+        }
+
+        div:nth-child(3) {
+
+            background-color: transparent;
+        }
+
+        div:nth-child(2),
+        div:nth-child(4) {
+
+            background-color: transparent;
+        }
+
+    }
+}
+
+@media (max-width: 600px)  {
+
+    .grid {
+
+        grid-template-columns: 5% 10px 2fr 10px 5%;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1200px)  {
+
+    .grid {
+
+        grid-template-columns: 5% 10px 2fr 10px 5%;
+    }
+
+}
